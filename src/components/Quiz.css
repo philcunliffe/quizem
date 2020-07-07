@@ -1,0 +1,35 @@
+.quiz.container {
+    max-width: calc(60vw + 40px);
+    min-width: 620px;
+    max-height: 100vh;
+}
+
+.card {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card-body {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.carousel, .question-image-container {
+    height: 50vh;
+}
+
+.carousel-inner, .carousel-item{
+    height: 100%;
+}
+
+.carousel-item, .question-image-container {
+    position: relative;
+}
+
+.carousel img, .question-image-container img {
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

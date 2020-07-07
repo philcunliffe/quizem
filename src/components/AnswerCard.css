@@ -1,0 +1,11 @@
+.card-text {
+    text-align: left;
+}
+
+.wiki-link {
+    font-style: italic;
+}
+
+li.warning {
+    color: orange;
+}
