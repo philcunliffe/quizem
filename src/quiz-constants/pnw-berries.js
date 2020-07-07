@@ -573,7 +573,6 @@ const berries = [
       "redcurrant3.jpg",
       "redcurrant4.jpg",
       "redcurrant5.jpg",
-      "redcurrant6.jpg",
     ],
     wikiLink: {
       text: "Ribes spp.",
@@ -627,9 +626,9 @@ const berries = [
       href: "http://en.wikipedia.org/wiki/gaultheria_shallon"
     },
     bullets: [
-      { text: 'berries are mildly sweet with good flavour.' , isWarning: false },
-      { text: 'berries can be dried into cakes.' , isWarning: false },
-      { text: 'plant grows in coastal areas and forms deep thickets.' , isWarning: false },
+      { text: 'Berries are mildly sweet with good flavour.' , isWarning: false },
+      { text: 'Berries can be dried into cakes.' , isWarning: false },
+      { text: 'Plant grows in coastal areas and forms deep thickets.' , isWarning: false },
     ],
     edible: true
   },
