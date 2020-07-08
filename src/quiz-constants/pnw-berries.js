@@ -1,4 +1,4 @@
-const berries = [
+export const berries = [
   {
     name: "Bearberry",
     otherNames: ["Kinnikinnick"],
@@ -787,4 +787,10 @@ const berries = [
   // }
 ];
 
-export default berries;
+export const pnwBerryTitles = {
+  A: 'Fruit Ninja',
+  B: 'Watermelon Baller',
+  C: 'Green-ass Strawberry',
+  D: 'Frumpy Raspberry',
+  F: 'Bitchberry',
+};

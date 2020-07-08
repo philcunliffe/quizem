@@ -41,6 +41,20 @@ class Quiz extends React.Component {
     return shuffle([...options, correctAnswer]);
   }
 
+  getBallerStatus = () => {
+    const grade = this.state.score / this.cards.length;
+    if (grade >= 0.9) {
+      return this.props.titles.A;
+    } else if (grade >= 0.8) {
+      return this.props.titles.B;
+    } else if (grade >= 0.7) {
+      return this.props.titles.C;
+    } else if (grade >= 0.6) {
+      return this.props.titles.D;
+    }
+    return this.props.titles.F;
+  }
+
   handleAnswer = (answer) => {
     // Correct answer?
     const correct = answer === this.currentCard.name;
@@ -66,7 +80,27 @@ class Quiz extends React.Component {
     }
   }
 
+  handleRestart = () => {
+    this.cards = shuffle(Quiz.PickPhotos([...this.props.cards]));
+    this.setState({
+      score: 0,
+      questionNumber: 1,
+      showAnswer: false,
+      lastWasCorrect: false,
+      quizComplete: false,
+    });
+  }
+
   render() {
+    if (this.state.quizComplete) {
+      return (
+        <div className="finish-screen">
+          <h1>Final score: {this.state.score} / {this.cards.length}</h1>
+          <h2>Youz a {this.getBallerStatus()}</h2>
+          <a href="#" className="btn btn-primary" onClick={this.handleRestart}>Restart</a>
+        </div>
+      )
+    }
     return (
       <div className="quiz container">
         {
